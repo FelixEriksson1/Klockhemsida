@@ -1,0 +1,265 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+#header {
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    letter-spacing: 3px;
+    top: 20px;
+    text-align: center;
+    transition: 0.7s;
+}
+  
+.header a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.header .headerContainer {
+    display: flex;
+    gap:15px;
+    position: absolute;
+    right:20px;
+    top: 0;
+    font-family: Pathway Extreme;
+    font-size: 12px;
+    font-weight: 1000;
+    color: white;
+    justify-content: center;
+}
+
+.header .headerContainer ul{
+    list-style-type: none;
+    display: flex;
+    gap:15px;
+    position: absolute;
+    right: 20px;
+    margin-top: 0px;
+    font-family: Pathway Extreme;
+    font-weight: 1000;
+    color: white;
+    justify-content: center;
+}
+
+.header .headerContainer a{
+    color: white;
+    font-size: 12px;
+}
+  
+.headerContainer li{
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    .header .headerContainer {
+      display: none;
+    }
+  }
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 9999;
+    cursor: pointer;
+    transition: 0.7s;
+}
+  
+.menu-button span {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+}
+  @media only screen and (max-width: 768px) {
+    .menu{
+      width: 100%;
+
+    }
+  }
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgba(63, 63, 63, 0.5);
+    backdrop-filter: blur(10px);
+    opacity: 1;
+}
+  
+.menu ul li {
+    padding: 15px;
+    font-size: 18px;
+    font-family: Arial black;
+    position: relative;
+}
+  
+.menu ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 30px;
+}
+  
+  @media only screen and (max-width: 768px) {
+    .menu ul li a {
+      font-size: 50px;
+    }
+  }
+.menu ul li a:hover {
+    color: rgb(177, 177, 177);
+}
+
+.menu-open {
+    transform: translateX(0%);
+}
+  
+.menu ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+  
+.menu ul li:hover::after {
+    transform: scaleX(1);
+}
+
+table {
+    margin-top: 5%;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: black;
+    color: white;
+}
+  
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+  
+th {
+    background-color: grey;
+}
+  
+tfoot th, tfoot td {
+    border-top: 1px solid white;
+}
+
+.footer {
+    margin-top: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #666;
+}
+  
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+  
+.footer-left h3,
+.footer-right h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.footer-left p {
+    margin-bottom: 20px;
+}
+  
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.footer-right li {
+    margin-bottom: 10px;
+}
+  
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #666;
+}
+  
+.footer-bottom p {
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.follow-text {
+    margin-right: 10px;
+}
+  
+.social-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #000;
+    text-align: center;
+    line-height: 32px;
+}
+  
+.social-icon i {
+    font-size: 18px;
+}
+  
+.social-icon:hover {
+    background-color: #ddd;
+    color: #000;
+}

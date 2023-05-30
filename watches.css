@@ -1,0 +1,416 @@
+@font-face {
+  font-family: Pathway Extreme;
+  src: url(\PathwayExtreme-VariableFont_opszwdthwght.ttf);
+}
+@font-face {
+  font-family: rolex;
+  src: url(\RoundslabSerif.ttf);
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#watchContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#displayHeader {
+    position: fixed;
+    justify-content: center;
+    justify-self: center;
+    display: flex;
+}
+
+#displayContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap:80px;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    transition: 0.7s;
+    color: rgb(146, 146, 146);
+}
+
+#button-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40%;
+  transition: 0.7s;
+}
+
+.button {
+  margin-right: 10px;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: transform 0.5s ease;
+  position: relative;
+  z-index: 2;
+  height: 50px;
+  width: 120px;
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 70px;
+  }
+}
+
+
+.button:hover {
+  background-color: lightgrey;
+}
+
+.hidden {
+  display: none;
+  
+}
+
+.slide-in {
+  animation: slide-in 0.5s ease;
+}
+
+.slide-out {
+  animation: slide-out 0.5s ease;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.display {
+    max-height: 700px;
+    text-align: center;
+    width: 100%;
+    max-width: 230px;
+    height: auto;   
+    justify-content: space-between;
+    object-fit: center;
+    margin-bottom: 7%;
+}
+
+.relativeBox {
+    position: relative;
+    height:20%;
+}
+
+.displayText {
+    position: absolute;
+    height:100%;
+    color: #fff;
+}
+
+.displayImage {
+    width:100%;
+    height:400px;
+    background-size: cover;
+}
+
+.watchPreview {
+  height: 400px;
+  width: 230px;
+}
+
+
+.rm88:hover img{
+  content: url(https://media.richardmille.com/wp-content/uploads/2023/02/10203219/RM88_back.png?dpr=2&width=187.5);
+}
+
+.rm72:hover img{
+  content: url(https://media.richardmille.com/wp-content/uploads/2020/09/25172636/RM72-01B22.png?dpr=2&width=187.5);
+}
+.rm74:hover img{
+  content: url(https://media.richardmille.com/wp-content/uploads/2021/05/15153553/RM74-01_Back.png?dpr=2&width=187.5);
+}
+.rm35:hover img{
+  content: url(https://media.richardmille.com/wp-content/uploads/2021/12/05123905/RM-35-03-2b-.png?dpr=2&width=187.5);
+}
+.rm07:hover img{
+  content: url(https://media.richardmille.com/wp-content/uploads/2021/07/09193330/RM07-01-Automatqiue-Ceramiques-de-Couleursfin.png?dpr=2&width=187.5);
+}
+.rm67:hover img{
+  content: url(https://media.richardmille.com/wp-content/uploads/2019/12/17172446/RM-67-02_back.png?dpr=2&width=187.5);
+}
+.rm54:hover img{
+  content: url(https://media.richardmille.com/wp-content/uploads/2019/12/17172444/RM-67-01_back.png?dpr=2&width=187.5);
+}
+.rm01:hover img{
+  content: url(https://media.richardmille.com/wp-content/uploads/2023/02/10203217/RM66_back.png?dpr=2&width=187.5);
+}
+#header {
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    letter-spacing: 3px;
+    top: 20px;
+    text-align: center;
+    transition: 0.7s;
+  }
+  
+  .header a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 1000;
+    
+
+  }
+
+  
+  .header .headerContainer {
+    display: flex;
+    gap:15px;
+    position: absolute;
+    right:20px;
+    top: 0;
+    font-family: Pathway Extreme;
+    font-size: 12px;
+    font-weight: 1000;
+    color: white;
+    justify-content: center;
+  }
+
+  .header .headerContainer ul{
+    list-style-type: none;
+    display: flex;
+    gap:15px;
+    position: absolute;
+    right: 20px;
+    margin-top: 0px;
+    font-family: Pathway Extreme;
+    font-weight: 1000;
+    color: white;
+    justify-content: center;
+  }
+  .header .headerContainer a{
+    color: white;
+    font-size: 12px;
+  }
+  
+  .headerContainer li{
+    display: inline-block;
+    
+  }
+  @media only screen and (max-width: 768px) {
+    .header .headerContainer{
+      display: none;
+    }
+  }
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 9999;
+    cursor: pointer;
+    transition: 0.7s;
+  }
+  
+  .menu-button span {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  /* CSS for menu */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+  }
+  @media only screen and (max-width: 768px) {
+    .menu{
+      width: 100%;
+
+    }
+  }
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgba(63, 63, 63, 0.5);
+    backdrop-filter: blur(10px);
+    opacity: 1;
+  }
+  
+  .menu ul li {
+    padding: 15px;
+    font-size: 18px;
+    font-family: Arial black;
+    position: relative;
+  }
+  
+  .menu ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 30px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .menu ul li a {
+      font-size: 50px;
+    }
+  }
+  .menu ul li a:hover {
+    color: rgb(177, 177, 177);
+  }
+  
+  /* CSS for menu animation */
+  .menu-open {
+    transform: translateX(0%);
+  }
+  
+  .menu ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .menu ul li:hover::after {
+    transform: scaleX(1);
+  }
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #666;
+    margin-top: 30px;
+  }
+
+  
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-left h3,
+  .footer-right h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p {
+    margin-bottom: 20px;
+  }
+  
+  .footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    right: 0;
+  }
+  
+  .footer-right li {
+    margin-bottom: 10px;
+  
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #666;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+  }
+  .social-icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .follow-text {
+    margin-right: 10px;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #000;
+    text-align: center;
+    line-height: 32px;
+  }
+  
+  .social-icon i {
+    font-size: 18px;
+  }
+  
+  .social-icon:hover {
+    background-color: #ddd;
+    color: #000;
+  }
